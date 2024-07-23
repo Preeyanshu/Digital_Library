@@ -42,7 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .antMatchers("/transaction/**").hasAuthority("book-transaction")
 
-                .antMatchers("/admin/post/**").hasAuthority("add-admin")
+//                .antMatchers("/admin/post/**").hasAuthority("add-admin")
+                .antMatchers("/admin/post/**").permitAll()
                 .and()
                 .formLogin();
     }
